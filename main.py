@@ -1,6 +1,5 @@
 from flask import Flask, request, json
 import uuid
-from data import Accounts, Customers, Transactions
 from db import DB
 
 app = Flask(__name__)
@@ -76,3 +75,7 @@ def apply_transaction_to_customer_account_async():
     return {
         "body": "No matching Account number"
     }
+
+
+if __name__ == "__main__":
+    app.run()
